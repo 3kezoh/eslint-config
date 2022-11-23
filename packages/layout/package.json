@@ -1,0 +1,27 @@
+{
+  "name": "@ekezoh/eslint-config-layout",
+  "author": "Stanley CRICO",
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "main": "index.js",
+  "homepage": "https://github.com/3kezoh/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3kezoh/eslint-config.git",
+    "directory": "packages/layout"
+  },
+  "scripts": {
+    "lint": "eslint . --config index.js"
+  },
+  "files": [
+    "*.js"
+  ],
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "semantic-release": "^19.0.5"
+  }
+}
