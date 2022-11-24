@@ -12,6 +12,7 @@ module.exports = {
   env: {
     es6: true,
     node: true,
+    browser: true,
   },
   rules: {
     // Enforce linebreaks after opening and before closing array brackets
