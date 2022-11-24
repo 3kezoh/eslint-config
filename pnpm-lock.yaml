@@ -21,10 +21,8 @@ importers:
   packages/layout:
     specifiers:
       eslint: ^8.27.0
-      semantic-release: ^19.0.5
     devDependencies:
       eslint: 8.27.0
-      semantic-release: 19.0.5
 
 packages:
 
