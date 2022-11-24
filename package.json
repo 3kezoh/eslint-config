@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config-monorepo",
+  "author": "Stanley CRICO",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3kezoh/eslint-config.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "release": "pnpm --recursive --workspace-concurrency=1 exec -- npx --no-install semantic-release --extends semantic-release-monorepo"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "semantic-release": "^19.0.5",
+    "semantic-release-monorepo": "^7.0.5"
+  }
+}
