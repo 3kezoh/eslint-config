@@ -10,9 +10,7 @@ const INDENT_SIZE = 2;
 
 module.exports = {
   env: {
-    es6: true,
-    node: true,
-    browser: true,
+    es2022: true,
   },
   rules: {
     // Enforce linebreaks after opening and before closing array brackets
