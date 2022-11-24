@@ -24,7 +24,6 @@
     "eslint-config"
   ],
   "devDependencies": {
-    "eslint": "^8.27.0",
-    "semantic-release": "^19.0.5"
+    "eslint": "^8.27.0"
   }
 }
