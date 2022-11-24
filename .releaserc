@@ -1,0 +1,5 @@
+{
+  "extends": "semantic-release-monorepo",
+  "branches": "main",
+  "repositoryUrl": "https://github.com/3kezoh/eslint-config.git"
+}
