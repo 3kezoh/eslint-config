@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "release": "pnpm -r --workspace-concurrency=1 exec -- npx --no-install semantic-release -e semantic-release-monorepo"
+    "release": "pnpm --recursive --workspace-concurrency=1 exec -- npx --no-install semantic-release --extends semantic-release-monorepo"
   },
   "devDependencies": {
     "eslint": "^8.27.0",
