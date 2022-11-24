@@ -7,7 +7,8 @@
   "homepage": "https://github.com/3kezoh/eslint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/3kezoh/eslint-config.git"
+    "url": "https://github.com/3kezoh/eslint-config.git",
+    "directory": "packages/layout"
   },
   "scripts": {
     "lint": "eslint . --config index.js"
