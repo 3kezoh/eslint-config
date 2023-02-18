@@ -12,7 +12,7 @@ importers:
       semantic-release: 20.1.0
       semantic-release-monorepo: 7.0.5_semantic-release@20.1.0
 
-  packages/layout:
+  packages/rules:
     specifiers:
       eslint: ^8.34.0
     devDependencies:
