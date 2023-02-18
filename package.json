@@ -12,8 +12,8 @@
     "release": "pnpm --recursive --workspace-concurrency=1 exec -- npx --no-install semantic-release --extends semantic-release-monorepo"
   },
   "devDependencies": {
-    "eslint": "^8.27.0",
-    "semantic-release": "^19.0.5",
+    "eslint": "^8.34.0",
+    "semantic-release": "^20.1.0",
     "semantic-release-monorepo": "^7.0.5"
   }
 }
