@@ -5,7 +5,7 @@ A collection of ESLint rules that I use in my projects.
 ## Installation
 
 ```bash
-pnpm add --save-dev eslint @ekezoh/eslint-config-layout
+pnpm add --save-dev eslint @ekezoh/eslint-config
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Add the following to your `.eslintrc`:
 
 ```json
 {
-  "extends": ["@ekezoh/eslint-config-layout"]
+  "extends": ["@ekezoh/eslint-config"]
 }
 ```
 

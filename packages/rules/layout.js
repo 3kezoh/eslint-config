@@ -9,9 +9,6 @@ const ERROR = 2;
 const INDENT_SIZE = 2;
 
 module.exports = {
-  env: {
-    es2022: true,
-  },
   rules: {
     // Enforce linebreaks after opening and before closing array brackets
     "array-bracket-newline": [ERROR, "consistent"],
