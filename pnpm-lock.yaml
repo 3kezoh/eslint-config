@@ -8,9 +8,8 @@ importers:
       eslint: ^8.34.0
       semantic-release: ^20.1.0
       semantic-release-monorepo: ^7.0.5
-    dependencies:
-      '@ekezoh/eslint-config': link:packages/rules
     devDependencies:
+      '@ekezoh/eslint-config': link:packages/rules
       eslint: 8.34.0
       semantic-release: 20.1.0
       semantic-release-monorepo: 7.0.5_semantic-release@20.1.0
