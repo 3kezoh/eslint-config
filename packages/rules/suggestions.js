@@ -517,13 +517,7 @@ module.exports = {
         "require-yield": ERROR,
 
         // Enforce sorted import declarations within modules
-        "sort-imports": [ERROR, {
-            allowSeparatedGroups: false,
-            ignoreCase: false,
-            ignoreDeclarationSort: false,
-            ignoreMemberSort: false,
-            memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
-        }],
+        "sort-imports": OFF,
 
         // Require object keys to be sorted
         "sort-keys": [ERROR, "asc", {
