@@ -168,13 +168,21 @@ module.exports = {
         // Disallow unused variables
         "no-unused-vars": [
             ERROR,
-            { vars: "all", args: "after-used", ignoreRestSiblings: true },
+            {
+                args: "after-used",
+                ignoreRestSiblings: true,
+                vars: "all",
+            },
         ],
 
         // Disallow the use of variables before they are defined
         "no-use-before-define": [
             ERROR,
-            { functions: false, classes: false, variables: false },
+            {
+                classes: false,
+                functions: false,
+                variables: false,
+            },
         ],
 
         // Disallow useless backreferences in regular expressions

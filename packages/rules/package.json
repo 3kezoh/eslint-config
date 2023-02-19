@@ -14,7 +14,7 @@
     "directory": "packages/rules"
   },
   "scripts": {
-    "lint": "eslint . --config *.js"
+    "lint": "eslint . --config index.js"
   },
   "files": [
     "*.js"

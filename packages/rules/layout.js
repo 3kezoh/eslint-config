@@ -35,7 +35,7 @@ module.exports = {
         "comma-dangle": [ERROR, "always-multiline"],
 
         // Enforce consistent spacing before and after commas
-        "comma-spacing": [ERROR, { before: false, after: true }],
+        "comma-spacing": [ERROR, { after: true, before: false }],
 
         // Enforce consistent comma style
         "comma-style": [ERROR, "last"],
@@ -65,16 +65,20 @@ module.exports = {
         "implicit-arrow-linebreak": [ERROR, "beside"],
 
         // Enforce consistent indentation
-        "indent": [ERROR, INDENT_SIZE, { SwitchCase: 1 }],
+        indent: [ERROR, INDENT_SIZE, { SwitchCase: 1 }],
 
         // Enforce the consistent use of either double or single quotes in JSX attributes
         "jsx-quotes": [ERROR, "prefer-double"],
 
         // Enforce consistent spacing between keys and values in object literal properties
-        "key-spacing": [ERROR, { beforeColon: false, afterColon: true, mode: "strict" }],
+        "key-spacing": [ERROR, {
+            afterColon: true,
+            beforeColon: false,
+            mode: "strict",
+        }],
 
         // Enforce consistent spacing before and after keywords
-        "keyword-spacing": [ERROR, { before: true, after: true }],
+        "keyword-spacing": [ERROR, { after: true, before: true }],
 
         // Enforce position of line comments
         "line-comment-position": [ERROR, { position: "above" }],
@@ -83,13 +87,32 @@ module.exports = {
         "linebreak-style": [ERROR, "unix"],
 
         // Require empty lines around comments
-        "lines-around-comment": [ERROR, { beforeBlockComment: true, afterBlockComment: false, beforeLineComment: true, afterLineComment: false, allowBlockStart: true, allowBlockEnd: false, allowObjectStart: true, allowObjectEnd: false, allowArrayStart: true, allowArrayEnd: false }],
+        "lines-around-comment": [ERROR, {
+            afterBlockComment: false,
+            afterLineComment: false,
+            allowArrayEnd: false,
+            allowArrayStart: true,
+            allowBlockEnd: false,
+            allowBlockStart: true,
+            allowObjectEnd: false,
+            allowObjectStart: true,
+            beforeBlockComment: true,
+            beforeLineComment: true,
+        }],
 
         // Require or disallow an empty line between class members
         "lines-between-class-members": [ERROR, "always", { exceptAfterSingleLine: true }],
 
         // Enforce a maximum line length
-        "max-len": [ERROR, { code: 80, tabWidth: INDENT_SIZE, ignoreComments: true, ignoreUrls: true, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreRegExpLiterals: true }],
+        "max-len": [ERROR, {
+            code: 80,
+            ignoreComments: true,
+            ignoreRegExpLiterals: true,
+            ignoreStrings: true,
+            ignoreTemplateLiterals: true,
+            ignoreUrls: true,
+            tabWidth: INDENT_SIZE,
+        }],
 
         // Enforce a maximum numbers of statements allowed per line
         "max-statements-per-line": [ERROR, { max: 1 }],
@@ -104,7 +127,10 @@ module.exports = {
         "newline-per-chained-call": [ERROR, { ignoreChainWithDepth: 2 }],
 
         // Disallow unnecessary parentheses
-        "no-extra-parens": [ERROR, "all", { nestedBinaryExpressions: false, enforceForArrowConditionals: false }],
+        "no-extra-parens": [ERROR, "all", {
+            enforceForArrowConditionals: false,
+            nestedBinaryExpressions: false,
+        }],
 
         // Disallow mixed spaces and tabs for indentation
         "no-mixed-spaces-and-tabs": [ERROR, "smart-tabs"],
@@ -113,7 +139,11 @@ module.exports = {
         "no-multi-spaces": [ERROR, { ignoreEOLComments: false }],
 
         // Disallow multiple empty lines
-        "no-multiple-empty-lines": [ERROR, { max: 1, maxEOF: 0, maxBOF: 0 }],
+        "no-multiple-empty-lines": [ERROR, {
+            max: 1,
+            maxBOF: 0,
+            maxEOF: 0,
+        }],
 
         // Disallow all tabs
         "no-tabs": ERROR,
@@ -128,7 +158,10 @@ module.exports = {
         "nonblock-statement-body-position": [ERROR, "beside"],
 
         // Enforce consistent line breaks after opening and before closing braces
-        "object-curly-newline": [ERROR, { multiline: true, consistent: true }],
+        "object-curly-newline": [ERROR, {
+            consistent: true,
+            multiline: true,
+        }],
 
         // Enforce consistent spacing inside braces
         "object-curly-spacing": [ERROR, "always"],
@@ -145,44 +178,90 @@ module.exports = {
         // Require or disallow padding lines between statements
         "padding-line-between-statements": [ERROR,
             // Require an empty line before return statements
-            { blankLine: "always", prev: "*", next: "return" },
+            {
+                blankLine: "always",
+                next: "return",
+                prev: "*",
+            },
 
             // Require an empty line after variable declarations, but no between them
-            { blankLine: "always", prev: ["const", "let", "var"], next: "*" },
-            { blankLine: "any", prev: ["const", "let", "var"], next: ["const", "let", "var"] },
+            {
+                blankLine: "always",
+                next: "*",
+                prev: ["const", "let", "var"],
+            },
+            {
+                blankLine: "any",
+                next: ["const", "let", "var"],
+                prev: ["const", "let", "var"],
+            },
 
             // Require an empty line before block statements
-            { blankLine: "always", prev: "*", next: "block-like" },
+            {
+                blankLine: "always",
+                next: "block-like",
+                prev: "*",
+            },
 
             // Require an empty line before directives
-            { blankLine: "always", prev: "directive", next: "*" },
+            {
+                blankLine: "always",
+                next: "*",
+                prev: "directive",
+            },
 
             // Require an empty line after import statements
-            { blankLine: "always", prev: "import", next: "*" },
+            {
+                blankLine: "always",
+                next: "*",
+                prev: "import",
+            },
 
             // Disallow an empty line between import statements
-            { blankLine: "never", prev: "import", next: "import" },
+            {
+                blankLine: "never",
+                next: "import",
+                prev: "import",
+            },
 
             // Require an empty line after commonjs require statements
-            { blankLine: "always", prev: "cjs-import", next: "*" },
+            {
+                blankLine: "always",
+                next: "*",
+                prev: "cjs-import",
+            },
 
             // Disallow an empty line between commonjs require statements
-            { blankLine: "never", prev: "cjs-import", next: "cjs-import" },
+            {
+                blankLine: "never",
+                next: "cjs-import",
+                prev: "cjs-import",
+            },
 
             // Require an empty line before commonjs exports statements
-            { blankLine: "always", prev: "*", next: "cjs-export" }],
+            {
+                blankLine: "always",
+                next: "cjs-export",
+                prev: "*",
+            }],
 
         // Require quotes around object literal property names
-        "quotes": [ERROR, "double", { avoidEscape: true, allowTemplateLiterals: false }],
+        quotes: [ERROR, "double", {
+            allowTemplateLiterals: false,
+            avoidEscape: true,
+        }],
 
         // Enforce spacing between rest and spread operators and their expressions
         "rest-spread-spacing": [ERROR, "never"],
 
         // Require or disallow semicolons instead of ASI
-        "semi": [ERROR, "always"],
+        semi: [ERROR, "always"],
 
         // Enforce consistent spacing before and after semicolons
-        "semi-spacing": [ERROR, { before: false, after: true }],
+        "semi-spacing": [ERROR, {
+            after: true,
+            before: false,
+        }],
 
         // Enforce location of semicolons
         "semi-style": [ERROR, "last"],
@@ -191,7 +270,11 @@ module.exports = {
         "space-before-blocks": [ERROR, "always"],
 
         // Enforce consistent spacing before function definition opening parenthesis
-        "space-before-function-paren": [ERROR, { anonymous: "always", named: "never", asyncArrow: "always" }],
+        "space-before-function-paren": [ERROR, {
+            anonymous: "always",
+            asyncArrow: "always",
+            named: "never",
+        }],
 
         // Enforce consistent spacing inside parentheses
         "space-in-parens": [ERROR, "never"],
@@ -200,7 +283,10 @@ module.exports = {
         "space-infix-ops": ERROR,
 
         // Enforce consistent spacing before or after unary operators
-        "space-unary-ops": [ERROR, { words: true, nonwords: false }],
+        "space-unary-ops": [ERROR, {
+            nonwords: false,
+            words: true,
+        }],
 
         // Enforce spacing around colons of switch statements
         "switch-colon-spacing": [ERROR, { after: true, before: false }],

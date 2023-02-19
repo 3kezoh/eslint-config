@@ -15,5 +15,8 @@
     "eslint": "^8.34.0",
     "semantic-release": "^20.1.0",
     "semantic-release-monorepo": "^7.0.5"
+  },
+  "dependencies": {
+    "@ekezoh/eslint-config": "workspace:0.0.0-development"
   }
 }
