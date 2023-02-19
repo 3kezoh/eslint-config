@@ -24,7 +24,12 @@
     "eslint-config"
   ],
   "devDependencies": {
-    "eslint": "^8.34.0",
+    "eslint": "^8.34.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.34.0"
+  },
+  "dependencies": {
     "eslint-plugin-simple-import-sort": "^10.0.0"
   }
 }
